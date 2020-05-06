@@ -1,5 +1,5 @@
 #include "isogram.h"
-
+#include <string.h>
 
 bool is_isogram(const char phrase[]){
 
@@ -8,7 +8,7 @@ bool is_isogram(const char phrase[]){
         char currentchar=phrase[i];
         int hits=0;
         for (int j=0; j<len; j++) {
-             if(currentchar==phrase[j] && !(phrase[j] == " "))
+             if(currentchar == phrase[j] && !(phrase[j] == " "))
              {
                  hits++;
              }

@@ -26,7 +26,7 @@ void test_aal()
 }
 void test_leerzeichen()
 {
-    TEST_ASSERT_FALSE(is_isogram("Des hot an abstand"));
+    TEST_ASSERT_FALSE(is_isogram("Dialog schwer punkt"));
 }
 int main(void)
 {
