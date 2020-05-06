@@ -8,7 +8,7 @@ bool is_isogram(const char phrase[]){
         char currentchar=phrase[i];
         int hits=0;
         for (int j=0; j<len; j++) {
-             if(currentchar == phrase[j] && !(phrase[j] == " "))
+             if(currentchar == phrase[j] && !(phrase[j] == " ") && !(currentchar == (phrase[j]+32)))
              {
                  hits++;
              }

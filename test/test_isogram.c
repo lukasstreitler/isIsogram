@@ -22,7 +22,7 @@ void test_no_long_isogram(){
 }
 void test_aal()
 {
-    TEST_ASSERT_FALSE(is_isogram("Aal"));
+    TEST_ASSERT_TRUE(is_isogram("Aal"));
 }
 void test_leerzeichen()
 {
