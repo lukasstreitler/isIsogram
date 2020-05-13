@@ -32,7 +32,19 @@ void test_sonderzeichen()
 {
     TEST_ASSERT_TRUE(is_isogram("abc!!"));
 }
+void test_number()
+{
+   TEST_ASSERT_FALSE(is_isogram("1abc1"));
+}
+void test_aaa_should_be_an_isogram() {
+    bool isogram = is_isogram("aaa");
+    TEST_ASSERT_TRUE(isogram);
+}
 
+void test_aaabbbcc_should_not_be_an_isogram() {
+    bool isogram = is_isogram("aaabbbcc");
+    TEST_ASSERT_FALSE(isogram);
+}
 // TODO#1 is-isogram soll alle Sonderzeichen ignorieren (z.B: isIsogram("abc!!") --> TRUE ) 
  
 // TODO#2 Wörter in den alle Buchstaben gleich oft vorkommen, sind Isogramme 
@@ -50,6 +62,9 @@ int main(void)
    RUN_TEST(test_aal);
    RUN_TEST(test_leerzeichen);
    RUN_TEST(test_sonderzeichen);
+   RUN_TEST(test_number);
+   RUN_TEST(test_aaa_should_be_an_isogram);
+   RUN_TEST(test_aaabbbcc_should_not_be_an_isogram);
    UnityEnd();
    return 0;
 
